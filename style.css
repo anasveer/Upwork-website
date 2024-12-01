@@ -15,7 +15,8 @@ html {
 }
 body {
     color: var(--c-body);
-    line-height: 1.2;
+    line-height: 1.8;
+    font-weight: 400;
 }
 h1,h2,h3,h4,h5,h6 {
     color: var(--c-dark);
@@ -158,16 +159,19 @@ section {
         transition: all 0.3s ease-in-out;
         height: 0;
         overflow: hidden;
+        background-color: white;
         justify-content: center;
     }
     .nav-links.active {
-        height: 170px;
+        height: 200px;
     }
     .nav-links li {
         
         padding: 6px 0;
     }
-    
+    .nav-links li a {
+        color: var(--c-dark);
+    }
     .hamburger {
         display: block;
     }
@@ -187,4 +191,42 @@ section {
 }
 .hero h1 {
     color: white;
+}
+@keyframes scrolldown {
+    0% {
+        transform: translateY(30%);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(-30%);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(60%);
+        opacity: 0;
+    }
+}
+.scroll-down {
+    width: 30px;
+    height: 60px;
+    display: grid;
+    place-content: center;
+    font-size: 25px;
+    color: white;
+    border:  2px solid rgba(255,255,255,0.2);
+    border-radius: 30px;
+    position: absolute;
+    bottom: 45px;
+    left: 50%;
+    
+}
+.scroll-down .fa-solid {
+    animation: scrolldown 2s ease infinite;
+}
+.grid {
+    display: grid;
+    gap: 44px;
+}
+.three-col-grid {
+    grid-template-columns: repeat(3,1fr);
 }
