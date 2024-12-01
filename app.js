@@ -14,3 +14,14 @@ hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('active')
     hamburger.classList.toggle('active')
 })
+
+
+// type js
+var typed = new Typed('#hero-title',{
+    strings: ['Creative Agency.', 'Typed JS is Cool.'],
+    typeSpeed: 50,
+    loop: Infinity,
+    typeSpeed: 15,
+    backDelay: 2000,
+    
+});
