@@ -1,6 +1,7 @@
 :root {
     --c-brand: #fac562;
     --c-dark: #333;
+    --c-light: #f8f8f8;
     --c-body: #666;
     --n-height: 100px;
 }
@@ -35,7 +36,7 @@ h1,h2,h3,h4,h5,h6 {
     font-size: clamp(28px, 4vw, 36px);
 }
 .heading-3 {
-    font-size: 20px;
+    font-size: 25px;
 }
 a {
     color: var(--c-dark);
@@ -223,10 +224,72 @@ section {
 .scroll-down .fa-solid {
     animation: scrolldown 2s ease infinite;
 }
+
+/* section */
+.section-intro {
+    margin-bottom: 44px;
+}
 .grid {
     display: grid;
     gap: 44px;
 }
 .three-col-grid {
     grid-template-columns: repeat(3,1fr);
+}
+.services .grid {
+    gap: 0;
+}
+.service:nth-child(odd) {
+    background-color: var(--c-light);
+}
+.service {
+    padding: 44px;
+}
+.service p {
+    font-size: 14px;
+}
+.service .icon {
+    font-size: 38px;
+    color: var(--c-brand);
+}
+
+/* project */
+.two-col-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+.project {
+    position: relative;
+    overflow: hidden;
+}
+.project img {
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.4s ease-in-out;
+}
+.project .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    padding: 44px;
+    display: flex;
+    align-items: flex-end;
+    transition: all 0.4s ease-in-out;
+    opacity: 0;
+    display: none;
+}
+.project .overlay h2 {
+    color: white;
+}
+.project .overlay p {
+    color: rgba(255,255,255,0.6);
+}
+.project:hover .overlay {
+    opacity: 1;
+    display: flex;
+}
+.project:hover img {
+    transform: rotate(15deg) scale(1.3);
 }
