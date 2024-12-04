@@ -16,12 +16,7 @@ hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('active')
 })
 
-/*navLinksLi.forEach(li => li.addEventListener('click',() => {
-    navLinksLi.forEach(li => li.classList.remove('active'))
-    li.classList.add('active')
 
-    hamburger.classList.remove('active')
-})) */
 
 
 // type js
@@ -33,3 +28,5 @@ var typed = new Typed('#hero-title',{
     backDelay: 2000,
     
 });
+
+AOS.init();
